@@ -48,7 +48,8 @@ man pages, and sample configurations for the Lynx web browser.
 %define debug_package %{nil}
 
 %prep
-%setup -q -n %{name}-%{version}
+## %%setup -q -n %{name}-%{version}
+%etup -q
 
 %build
 %configure \
