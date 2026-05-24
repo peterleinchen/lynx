@@ -49,7 +49,7 @@ man pages, and sample configurations for the Lynx web browser.
 
 %prep
 ## %%setup -q -n %{name}-%{version}
-%setup -q -n %{name}%{version
+%setup -q -n %{name}%{version}
 
 %build
 %configure \
