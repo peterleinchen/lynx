@@ -5,7 +5,7 @@ Version: 2.9.2
 Release: 1
 License: GPLv2
 Group: Applications/Internet
-Source: https://invisible-island.net/archives/lynx/tarballs/lynx%{version}.tar.bz2
+Source0: https://invisible-island.net/archives/lynx/tarballs/lynx%{version}.tar.bz2
 ## Source: %%{name}-%%{version}.tgz
 URL: https://lynx.invisible-island.net
 Provides: webclient >= 0.0
@@ -49,7 +49,7 @@ man pages, and sample configurations for the Lynx web browser.
 
 %prep
 ## %%setup -q -n %{name}-%{version}
-%setup -q
+%setup -q -n %{name}%{version
 
 %build
 %configure \
