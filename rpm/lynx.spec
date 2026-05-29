@@ -5,7 +5,7 @@ Version: 2.9.3
 Release: 1
 License: GPLv2
 Group: Applications/Internet
-Source: https://invisible-island.net/archives/lynx/tarballs/lynx%{version}.tar.bz2
+Source: https://invisible-island.net/archives/lynx/tarballs/lynx%{version}.tar.gz
 ## Source: %%{name}-%%{version}.tgz
 URL: https://lynx.invisible-island.net
 Provides: webclient >= 0.0
@@ -15,7 +15,8 @@ Packager: Peter Leinchen (for SFOS) <peterleinchen@t-online.de>
 # Fedora:
 BuildRequires: pkgconfig, ncurses-devel >= 5.3-5,
 BuildRequires: zlib-devel, gettext
-## BuildRequires: libidn-devel
+#BuildRequires: libidn-devel
+BuildRequires: libidn2-devel
 BuildRequires: openssl-devel
 BuildRequires: bzip2-devel
 
@@ -82,9 +83,10 @@ man pages, and sample configurations for the Lynx web browser.
         --enable-syslog \
         --enable-warnings \
         --with-screen=ncursesw \
-        --with-ssl \
-    --without-idn \
-    --disable-idna
+        --with-ssl
+# old, without libidn2:
+#    --without-idn \
+#    --disable-idna
 make \
         docdir=%{lynx_doc}
 
